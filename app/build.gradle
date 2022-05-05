@@ -20,9 +20,13 @@ android {
 
         buildConfigField "boolean", "SHOW_LOG", "true"
         buildConfigField "int", "NUMBER", "123"
+        buildConfigField "long", "NUMBER_LONG", "1234567890123456777"
+        buildConfigField "float", "NUMBER_FLOAT", "789.65"
         buildConfigField "String", "APP_KEY", "\"123456\""
         buildConfigField "String", "NAME", "\"${CONST_PROPERTIES_NAME}\""
         buildConfigField "String", "TOKEN", "\"TOKEN_${CONST_PROPERTIES_NAME}_TOKEN\""
+
+        buildConfigField "long", "BUILD_DATE", "" + System.currentTimeMillis()
     }
     dataBinding {
         enabled = true
